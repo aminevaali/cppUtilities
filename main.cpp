@@ -23,12 +23,12 @@ int main(){
 // string replace function in c++
 void replace(char* str, char* oldStr, char newStr[]){
     for(int i = 0; str[i]; i++){
-        bool isAli = true;
+        bool isOldStr = true;
         for(int j = 0; oldStr[j]; j++){
-            isAli = isAli && str[i + j] == oldStr[j];
+            isOldStr = isOldStr && str[i + j] == oldStr[j];
         }
 
-        if(isAli){
+        if(isOldStr){
             int start = i + strlen(oldStr);
             int lengthDiff = strlen(newStr) - strlen(oldStr);
 
