@@ -32,8 +32,6 @@ void replace(char* str, char* oldStr, char newStr[]){
             int start = i + strlen(oldStr);
             int lengthDiff = strlen(newStr) - strlen(oldStr);
 
-            cout << lengthDiff << endl;
-
             if(lengthDiff >= 0){
                 for(int j = strlen(str); j >= start; j--){
                     str[j + lengthDiff] = str[j];
