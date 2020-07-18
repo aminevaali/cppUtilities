@@ -68,3 +68,21 @@ int strlen(char* str){
     for(;str[length] != '\0'; length++);
     return length;
 }
+
+bool strContains(char * str, char * search){
+	bool contains;
+	for(int i = 0; i < strlen(str) - strlen(search) + 1; i++){
+		contains = true;
+		for(int j = 0; search[j]; j++){
+			if(str[i + j] != search[j]){
+				contains = false;
+				break;
+			}
+				
+		}
+		if(contains)
+			return true;
+	}
+
+	return false;
+}
